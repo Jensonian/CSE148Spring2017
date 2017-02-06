@@ -1,0 +1,13 @@
+package p1;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Person p1 = new Person("John", "111");
+		Student s1 = new Student("David", "222", 3.5);
+		s1.setName("Jane");
+		System.out.println(s1.getName());
+		System.out.println(s1);
+	}
+
+}

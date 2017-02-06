@@ -1,0 +1,35 @@
+package p1;
+
+public class Demo {
+
+	public static void main(String[] args) {
+//		Person p1 = new Person("John", "111");
+//		System.out.println(p1);
+//		System.out.println("------------");
+//		Student s1 = new Student("David", "222", 3.5);
+//		s1.setName("Jane");
+//		System.out.println(s1.getName());
+//		System.out.println(s1);
+//		
+//		Faculty f1 = new Faculty("Alex", "333", 300000);
+//		f1.setName("Julie");
+////		f1.setId("444");
+//		System.out.println(f1);
+		// polymorphism: same variable type references different object type of subclasses
+		Person p1 = new Person("Adam", "111");
+		Person s1 = new Student("Billy", "222", 3.5);
+		Person f1 = new Faculty("Cathy", "333", 40000);
+		
+		Person[] pArray = new Person[5];
+		pArray[0] = p1;
+		pArray[1] = s1;
+		pArray[2] = f1;
+		
+		System.out.println(p1 instanceof Person);
+		System.out.println(s1 instanceof Person);
+		System.out.println(f1 instanceof Person);
+		
+		
+ 	}
+
+}
