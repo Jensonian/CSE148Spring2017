@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Student extends Person implements Serializable{
 	private double gpa;
-	private Scanner kb = new Scanner(System.in);
+	private transient Scanner kb = new Scanner(System.in);
 
 	public Student(String name, double gpa) {
 		super(name);
