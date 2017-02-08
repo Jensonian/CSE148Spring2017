@@ -1,10 +1,12 @@
 package p1;
 
-public class Faculty extends Person {
+import java.io.Serializable;
+
+public class Faculty extends Person implements Serializable{
 	private double salary;
 
-	public Faculty(String name, String id, double salary) {
-		super(name, id);
+	public Faculty(String name, double salary) {
+		super(name);
 		this.salary = salary;
 	}
 
