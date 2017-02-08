@@ -42,6 +42,5 @@ public class Student extends Person implements Serializable{
 			return gpa;
 		}
 	}
-	
 
 }

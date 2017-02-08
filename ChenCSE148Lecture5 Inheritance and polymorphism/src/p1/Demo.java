@@ -1,8 +1,10 @@
 package p1;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
@@ -23,21 +25,36 @@ public class Demo {
 //		System.out.println(f1);
 		// polymorphism: same variable type references different object type of subclasses
 //		Person p1 = new Person("Adam", "111");
+		
+		ArrayList<Person> myList = new ArrayList<>();
+		try {
+			FileInputStream fis = new FileInputStream("data.dat");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			myList = (ArrayList<Person>)(ois.readObject());
+			ois.close();
+		} catch (FileNotFoundException e1) {
+		} catch (IOException e) {
+		} catch (ClassNotFoundException e) {
+		}
 		Person s1 = new Student("Billy", 3.5);
-		System.out.println(s1.getIdNumber()); // --> 2
+//		System.out.println(s1.getIdNumber()); // --> 2
 		Person f1 = new Faculty("Cathy", 40000);
-		System.out.println(s1.getIdNumber()); // --> 3
-		System.out.println(f1.getIdNumber()); // --> 3
+//		System.out.println(s1.getIdNumber()); // --> 3
+//		System.out.println(f1.getIdNumber()); // --> 3
 		
 		
 		Person s2 = new Student("Billy", 3.5);
 		Person f2 = new Faculty("Cathy", 40000);
 		
-		ArrayList<Person> myList = new ArrayList<>();
+		
 		myList.add(s1);
 		myList.add(s2);
 		myList.add(f2);
 		myList.add(f1);
+		
+		for(int i = 0; i < myList.size(); i++) {
+			System.out.println(myList.get(i));
+		}
 		try {
 			FileOutputStream fos = new FileOutputStream("data.dat");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -50,7 +67,7 @@ public class Demo {
 		}
 		
 		
-		System.out.println(s1.getIdNumber()); //--> 5
+//		System.out.println(s1.getIdNumber()); //--> 5
 //		System.out.println(s1);
 //		System.out.println(f1);
 //		System.out.println(s2);
