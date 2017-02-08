@@ -6,8 +6,8 @@ public class Demo {
 		Student s = new Student();
 //		s.name = "John Doe";
 //		s.gpa = 5.0;
-		System.out.println(s.name);
-		System.out.println(s.gpa);
+		System.out.println(s.getName());
+		System.out.println(s.getGpa());
 	}
 
 }

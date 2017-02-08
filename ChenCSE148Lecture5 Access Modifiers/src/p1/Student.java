@@ -12,6 +12,10 @@ public class Student {
 
 	private String name;
 	private double gpa;
+	
+	public Student() {
+	
+	}
 	public Student(String name, double gpa) {
 		super();
 		this.name = name;
