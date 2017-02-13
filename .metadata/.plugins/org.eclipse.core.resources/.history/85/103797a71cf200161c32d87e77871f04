@@ -1,0 +1,14 @@
+package shallowCopy;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Student s1 = new Student("Adam", "CSE118, MAT141");
+		Student s2 = s1; // shallow copy for only the address is copied
+		// implications
+		s1.setCoursesTaking("CSE148, MAT142");
+		System.out.println(s1.getCoursesTaking()); // CSE148 MAT142
+		System.out.println(s2.getCoursesTaking());  // CSE148, MAT142
+	}
+
+}

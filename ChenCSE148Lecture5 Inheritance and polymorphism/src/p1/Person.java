@@ -19,6 +19,8 @@ public abstract class Person implements Serializable {
 		super();
 		this.name = name;
 		
+		
+		// to read data from a text file
 		File file = new File("id.txt");
 		
 			try {
@@ -30,6 +32,8 @@ public abstract class Person implements Serializable {
 		
 		this.id = String.valueOf(idNumber++);
 		
+		
+		// to write data into a text file
 		try {
 			PrintWriter pw = new PrintWriter("id.txt");
 			pw.write(idNumber + "");

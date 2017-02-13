@@ -1,0 +1,12 @@
+package shallowCopy;
+
+public class DeepCopyDemo {
+
+	public static void main(String[] args) {
+		Student s1 = new Student("Adam", "CSE118, MAT141");
+		Student s2 = new Student("Adam", "CSE118, MAT141");
+		s1.setCoursesTaking("CSE148, MAT142");
+		System.out.println(s1.getCoursesTaking()); // CSE148 MAT142
+	}
+
+}

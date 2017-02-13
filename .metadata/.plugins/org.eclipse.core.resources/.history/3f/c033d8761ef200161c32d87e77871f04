@@ -1,0 +1,38 @@
+package shallowCopy;
+
+public class Student {
+	private String name;
+	private String coursesTaking;
+
+	public Student(String name, String coursesTaking) {
+		super();
+		this.name = name;
+		this.coursesTaking = coursesTaking;
+	}
+	
+	public Student shallowCopyStudent(Student s) {
+		return s;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCoursesTaking() {
+		return coursesTaking;
+	}
+
+	public void setCoursesTaking(String coursesTaking) {
+		this.coursesTaking = coursesTaking;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", coursesTaking=" + coursesTaking + "]";
+	}
+
+}

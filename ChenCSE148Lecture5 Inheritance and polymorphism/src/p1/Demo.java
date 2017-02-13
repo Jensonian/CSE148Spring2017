@@ -36,28 +36,28 @@ public class Demo {
 		} catch (IOException e) {
 		} catch (ClassNotFoundException e) {
 		}
-		Person s1 = new Student("Billy", 3.5);
+//		Person s1 = new Student("Billy", 3.5);
 //		System.out.println(s1.getIdNumber()); // --> 2
-		Person f1 = new Faculty("Cathy", 40000);
+//		Person f1 = new Faculty("Cathy", 40000);
 //		System.out.println(s1.getIdNumber()); // --> 3
 //		System.out.println(f1.getIdNumber()); // --> 3
 		
 		
 		Person s2 = new Student("Billy", 3.5);
 		Person f2 = new Faculty("Cathy", 40000);
+//		
 		
-		
-		myList.add(s1);
+//		myList.add(s1);
 		myList.add(s2);
 		myList.add(f2);
-		myList.add(f1);
+//		myList.add(f1);
 		
 		for(int i = 0; i < myList.size(); i++) {
 			System.out.println(myList.get(i));
 		}
 		try {
 			FileOutputStream fos = new FileOutputStream("data.dat");
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			ObjectOutputStream oos = new ObjectOutputStream(fos); // wrapper class
 			oos.writeObject(myList);
 			oos.close();
 		} catch (FileNotFoundException e) {
