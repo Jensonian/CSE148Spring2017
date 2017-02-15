@@ -1,0 +1,33 @@
+package p1;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		int[] numbers = {0, 1, 2, 3, 4, 5};
+		
+		try {
+			System.out.println(numbers[6]); // unchecked exception
+			System.out.println("after exception");
+		} catch (Exception ex) {
+			System.out.println("hhahaa some error happened.");
+		}
+		System.out.println("finished");
+		
+		// checked exception
+		PrintWriter pw;
+		try {
+			pw = new PrintWriter("data.txt");
+			pw.write("hi");
+			pw.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Whatever in here will still work when there is try-catch");
+		
+		
+	}
+
+}
